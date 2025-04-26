@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/students';
+const API_URL = 'https://student-management-system-backend-48to.onrender.com';
 
 // Get all students
 export const getStudents = async () => {
