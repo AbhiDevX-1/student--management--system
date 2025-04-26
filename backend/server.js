@@ -3,10 +3,10 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
-// Load env vars
+// Load environment variables from .env file
 dotenv.config();
 
-// Connect to database
+// Connect to MongoDB database
 connectDB();
 
 const app = express();
@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Student Management System API' });
 });
 
+// Set the port and listen
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
